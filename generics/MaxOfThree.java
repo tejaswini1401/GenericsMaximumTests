@@ -1,13 +1,13 @@
 package com.generics;
 public class MaxOfThree {
 
-    public static float findMaximum(float a, float b, float c) {
-        float max = a;
+	public static String findMaximum(String a, String b, String c) {
+        String max = a;
 
-        if (b > max) {
+        if (b.compareTo(max) > 0) {
             max = b;
         }
-        if (c > max) {
+        if (c.compareTo(max) > 0) {
             max = c;
         }
 
@@ -15,11 +15,11 @@ public class MaxOfThree {
     }
 
     public static void main(String[] args) {
-        float a = 10.5f;
-        float b = 20.6f;
-        float c = 30.57f;
+        String a = "apple";
+        String b = "banana";
+        String c = "Leamon";
 
-        float result = findMaximum(a, b, c);
-        System.out.println("The maximum value is: " + result);
+        String result = findMaximum(a, b, c);
+        System.out.println("The maximum string is: " + result);
     }
 }
