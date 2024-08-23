@@ -1,8 +1,8 @@
 package com.generics;
 public class MaxOfThree {
 
-    public static int findMaximum(int a, int b, int c) {
-        int max = a;
+    public static float findMaximum(float a, float b, float c) {
+        float max = a;
 
         if (b > max) {
             max = b;
@@ -15,11 +15,11 @@ public class MaxOfThree {
     }
 
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
-        int c = 30;
+        float a = 10.5f;
+        float b = 20.6f;
+        float c = 30.57f;
 
-        int result = findMaximum(a, b, c);
+        float result = findMaximum(a, b, c);
         System.out.println("The maximum value is: " + result);
     }
 }
