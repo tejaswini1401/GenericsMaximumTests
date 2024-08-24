@@ -13,12 +13,7 @@ public class MaxOfThree<T extends Comparable<T>> {
     }
 
     public T testMaximum() {
-        return findMaximum(a, b, c);
-    }
-
-    public void printMax() {
-        T max = testMaximum();
-        System.out.println("Maximum value: " + max);
+        return printMax(a, b, c);
     }
 
     public static <T extends Comparable<T>> T findMaximum(T a, T b, T c) {
@@ -34,14 +29,20 @@ public class MaxOfThree<T extends Comparable<T>> {
         return max;
     }
 
+    public static <T extends Comparable<T>> T printMax(T a, T b, T c) {
+        T max = findMaximum(a, b, c);
+        System.out.println("Maximum value: " + max);
+        return max;
+    }
+
     public static void main(String[] args) {
         MaxOfThree<Integer> intTest = new MaxOfThree<>(10, 20, 30);
-        intTest.printMax(); 
+        System.out.println("Max Integer: " + intTest.testMaximum());
 
         MaxOfThree<String> strTest = new MaxOfThree<>("apple", "banana", "cherry");
-        strTest.printMax(); 
-
+        System.out.println("Max String: " + strTest.testMaximum());
+        
         MaxOfThree<Float> floatTest = new MaxOfThree<>(10.5f, 53.2f, 134.4f);
-        floatTest.printMax(); 
+        System.out.println("Max Float: " + floatTest.testMaximum());
     }
 }
